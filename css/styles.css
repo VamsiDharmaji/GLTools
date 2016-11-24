@@ -1,9 +1,10 @@
 ﻿.ba-slider {
   position: relative;
   overflow: hidden;
-  width:650px;
-  height:321px;
+  width:1114px;
+  height:550px;
 }
+
 .ba-slider img {
   width: 100%;
   display: block;
@@ -27,28 +28,48 @@
   background: rgba(0, 0, 0, 0.5);
   cursor: ew-resize;
 }
-.handle:after {
-  /* Big orange knob  */
-  position: absolute;
-  top: 50%;
-  width: 64px;
-  height: 64px;
-  margin: -32px 0 0 -32px;
-  content: '\21d4';
-  color: white;
-  font-weight: bold;
-  font-size: 36px;
-  text-align: center;
-  line-height: 64px;
-  background: #ffb800;
-  /* @orange */
-  border: 1px solid #e6a600;
-  /* darken(@orange, 5%) */
-  border-radius: 50%;
-  transition: all 0.3s ease;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3), inset 0 2px 0 rgba(255, 255, 255, 0.5), inset 0 60px 50px -30px #ffd466;
-  /* lighten(@orange, 20%)*/
+
+.handle-button{
+    height: 38px;
+    width: 38px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -22px;
+    margin-top: -22px;
+    background-color:#343434;
+    border: 3px solid #343434;
+    -webkit-border-radius: 1000px;
+    -moz-border-radius: 1000px;
+    border-radius: 1000px;
+    /*-webkit-box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.5);*/
+    z-index: 40;
 }
+
+.handle-left-arrow, .handle-right-arrow {
+    width: 0;
+    height: 0;
+    border: 6px inset transparent;
+    position: absolute;
+    top: 50%;
+    margin-top: -6px;
+}
+
+.handle-left-arrow {
+    border-right: 6px solid #fff;
+    left: 50%;
+    margin-left: -17px;
+}
+
+.handle-right-arrow {
+    border-left: 6px solid #fff;
+    right: 50%;
+    margin-right: -17px;
+}
+
+
 .draggable:after {
   width: 48px;
   height: 48px;
