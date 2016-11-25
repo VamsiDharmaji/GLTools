@@ -1,0 +1,79 @@
+﻿.ba-slider {
+  position: relative;
+  overflow: hidden;
+  width:1350px;
+  height:510px;
+}
+
+.ba-slider img {
+  width: 100%;
+  display: block;
+}
+.resize {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 98%;
+  overflow: hidden;
+}
+.handle {
+  /* Thin line seperator */
+  position: absolute;
+  left: 98%;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  margin-left: -2px;
+  background: rgba(0, 0, 0, 0.5);
+  cursor: ew-resize;
+}
+
+.handle-button{
+    height: 38px;
+    width: 38px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -22px;
+    margin-top: -22px;
+    background-color:#343434;
+    border: 3px solid #343434;
+    -webkit-border-radius: 1000px;
+    -moz-border-radius: 1000px;
+    border-radius: 1000px;
+    /*-webkit-box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.5);*/
+    z-index: 40;
+}
+
+.handle-left-arrow, .handle-right-arrow {
+    width: 0;
+    height: 0;
+    border: 6px inset transparent;
+    position: absolute;
+    top: 50%;
+    margin-top: -6px;
+}
+
+.handle-left-arrow {
+    border-right: 6px solid #fff;
+    left: 50%;
+    margin-left: -17px;
+}
+
+.handle-right-arrow {
+    border-left: 6px solid #fff;
+    right: 50%;
+    margin-right: -17px;
+}
+
+
+.draggable:after {
+  width: 48px;
+  height: 48px;
+  margin: -24px 0 0 -24px;
+  line-height: 48px;
+  font-size: 30px;
+}
